@@ -9,7 +9,7 @@ services:
     build: ./frontend
     container_name: client-frontend
     ports:
-      - "12513:80"
+      - "12514:80"
     depends_on:
       - backend
   
