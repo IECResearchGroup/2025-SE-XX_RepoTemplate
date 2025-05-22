@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    container_name: client-backend
+    ports:
+      - "12513:3000"
+  frontend:
+    build: ./frontend
+    container_name: client-frontend
+    ports:
+      - "12513:80"
+    depends_on:
+      - backend
+  

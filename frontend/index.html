@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Client Info</title>
+</head>
+<body>
+  <h1>Client Information</h1>
+  <pre id="info">Loading...</pre>
+
+  <script>
+    fetch('/api/client')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('info').textContent = JSON.stringify(data, null, 2);
+      });
+  </script>
+</body>
+</html>
